@@ -2,6 +2,8 @@ docker-compose.yaml
 /mpcron/*
 !/mpcron/crontab-template
 /mpweb/*
+!/mpweb/site-html/
+/mpweb/site-html/*
 !/mpweb/site-html/index.html
 
 # =========================
