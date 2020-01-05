@@ -7,7 +7,7 @@ services:
     volumes:
       - "$PWD/mpweb:/var/www/html"
       #- "$PWD/mpcron/root:/var/spool/cron/crontabs/root"
-      #- "$PWD/mpcron/wwwphpfpm:/var/spool/cron/crontabs/wwwphpfpm"
+      #- "$PWD/mpcron/www-data:/var/spool/cron/crontabs/www-data"
     environment:
       - CF_PROJ_PRIMARY_FQDN=example-host.localhost
       #- CF_WWWDATA_USER_ID=<YOUR_UID>
