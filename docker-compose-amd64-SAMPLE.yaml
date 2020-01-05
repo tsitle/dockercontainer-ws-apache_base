@@ -1,0 +1,21 @@
+version: '3.5'
+services:
+  apache:
+    image: "tsle/ws-apache-base-amd64:1.0"
+    ports:
+      - "80:80"
+    volumes:
+      - "$PWD/mpweb:/var/www/html"
+      #- "$PWD/mpcron/root:/var/spool/cron/crontabs/root"
+      #- "$PWD/mpcron/wwwphpfpm:/var/spool/cron/crontabs/wwwphpfpm"
+    environment:
+      - CF_PROJ_PRIMARY_FQDN=example-host.localhost
+      #- CF_WWWDATA_USER_ID=<YOUR_UID>
+      #- CF_WWWDATA_GROUP_ID=<YOUR_GID>
+      - CF_SET_OWNER_AND_PERMS_WEBROOT=true
+      - CF_ENABLE_CRON=false
+      #- CF_LANG=de_DE.UTF-8
+      #- CF_TIMEZONE=Europe/Berlin
+    restart: unless-stopped
+    stdin_open: false
+    tty: false
