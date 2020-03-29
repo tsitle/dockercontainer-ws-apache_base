@@ -1,7 +1,7 @@
 version: '3.5'
 services:
   apache:
-    image: "tsle/ws-apache-base-arm64:1.4"
+    image: "tsle/ws-apache-base-arm64:2.4"
     ports:
       - "80:80"
     volumes:
