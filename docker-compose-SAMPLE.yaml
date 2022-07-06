@@ -5,7 +5,7 @@ services:
     ports:
       - "80:80"
     volumes:
-      - "$PWD/mpweb:/var/www/html"
+      - "$PWD/mpweb:/var/www/html/site-html"
       #- "$PWD/mpcron/root:/var/spool/cron/crontabs/root"
       #- "$PWD/mpcron/www-data:/var/spool/cron/crontabs/www-data"
     environment:
